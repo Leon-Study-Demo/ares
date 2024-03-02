@@ -4,8 +4,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import jp.tokyo.leon.cloud.entity.Pay;
-import jp.tokyo.leon.cloud.entity.PayDTO;
-import jp.tokyo.leon.cloud.resp.ResponseResult;
+import jp.tokyo.leon.cloud.entity.dto.PayDTO;
+import jp.tokyo.leon.cloud.response.ResponseResult;
 import jp.tokyo.leon.cloud.service.PayService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -53,9 +53,6 @@ public class PayController {
     @GetMapping("/pay/get/{id}")
     @Operation(summary = "获取", description = "获取支付流水方法")
     public ResponseResult<Pay> getById(@PathVariable("id") Integer id) {
-        if (id < 0) {
-            throw new RuntimeException("id不能为负数");
-        }
         Pay result = payService.getById(id);
         return ResponseResult.success(result);
 

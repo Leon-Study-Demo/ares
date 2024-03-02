@@ -1,7 +1,7 @@
-package jp.tokyo.leon.cloud.exp;
+package jp.tokyo.leon.cloud.exception;
 
-import jp.tokyo.leon.cloud.resp.ResponseResult;
-import jp.tokyo.leon.cloud.resp.ReturnCodeEnum;
+import jp.tokyo.leon.cloud.response.ResponseResult;
+import jp.tokyo.leon.cloud.response.ReturnCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,7 +18,8 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseResult<String> exception(Exception e) {
+    public ResponseResult<String> runtimeException(Exception e) {
+        log.error("error", e);
         return ResponseResult.fail(ReturnCodeEnum.RC500.getCode(), e.getMessage());
     }
 }

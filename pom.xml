@@ -11,7 +11,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>mybatis-generator</module>
-        <module>cloud-provider-payment</module>
+        <module>ares-payment</module>
+        <module>ares-order</module>
+        <module>ares-api</module>
     </modules>
 
     <properties>

@@ -1,4 +1,4 @@
-package jp.tokyo.leon.cloud.entity;
+package jp.tokyo.leon.cloud.entity.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

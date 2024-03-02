@@ -1,4 +1,4 @@
-package jp.tokyo.leon.cloud.resp;
+package jp.tokyo.leon.cloud.response;
 
 import lombok.Data;
 import lombok.experimental.Accessors; /**
