@@ -30,6 +30,11 @@
                 </exclusions>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+            </dependency>
+
             <!--web + actuator-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -54,11 +59,11 @@
                 <artifactId>hutool-all</artifactId>
             </dependency>
 
-            <!--fastjson2-->
-            <dependency>
-                <groupId>com.alibaba.fastjson2</groupId>
-                <artifactId>fastjson2</artifactId>
-            </dependency>
+<!--            &lt;!&ndash;fastjson2&ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.fastjson2</groupId>-->
+<!--                <artifactId>fastjson2</artifactId>-->
+<!--            </dependency>-->
 
             <!-- swagger3 调用方式 http://你的主机IP地址:5555/swagger-ui/index.html -->
             <dependency>

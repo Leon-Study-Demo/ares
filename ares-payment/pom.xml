@@ -85,11 +85,11 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
-        <!-- fastjson2 -->
-        <dependency>
-            <groupId>com.alibaba.fastjson2</groupId>
-            <artifactId>fastjson2</artifactId>
-        </dependency>
+<!--        &lt;!&ndash; fastjson2 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.fastjson2</groupId>-->
+<!--            <artifactId>fastjson2</artifactId>-->
+<!--        </dependency>-->
         <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -104,10 +104,22 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.3.8</version>
+        </dependency>
+
         <!-- 内部模块 -->
         <dependency>
             <groupId>jp.tokyo.leon.cloud</groupId>
             <artifactId>ares-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jp.tokyo.leon.cloud</groupId>
+            <artifactId>ares-dao</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

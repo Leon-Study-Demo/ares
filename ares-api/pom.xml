@@ -18,6 +18,24 @@
     </properties>
 
         <dependencies>
+            <!-- openfeign -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+            </dependency>
+
+            <!-- Swagger3 -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            </dependency>
+
+            <!-- fastjson2 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+            </dependency>
+
             <!--SpringBoot通用依赖模块-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>

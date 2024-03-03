@@ -15,7 +15,7 @@ spring:
 
 # ========================mybatis===================
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml  # 这个不应该是classpath* 么？
   type-aliases-package: jp.tokyo.leon.cloud.entity
   configuration:
     map-underscore-to-camel-case: true

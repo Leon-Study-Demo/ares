@@ -14,6 +14,7 @@
         <module>ares-payment</module>
         <module>ares-order</module>
         <module>ares-api</module>
+        <module>ares-dao</module>
     </modules>
 
     <properties>
