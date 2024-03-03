@@ -14,14 +14,17 @@ spring:
         service-name: ${spring.application.name}
 
     openfeign:
+      httpclient:
+        hc5:
+          enabled: true
       client:
         config:
           default: # 全局
             connect-timeout: 10000
             read-timeout: 10000
           ares-payment-service: # 指定服务
-            connect-timeout: 3000
-            read-timeout: 3000
+            connect-timeout: 4000
+            read-timeout: 4000
 
 
 
