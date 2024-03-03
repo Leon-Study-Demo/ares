@@ -23,8 +23,26 @@ spring:
             connect-timeout: 10000
             read-timeout: 10000
           ares-payment-service: # 指定服务
-            connect-timeout: 4000
-            read-timeout: 4000
+            connect-timeout: 2000
+            read-timeout: 2000
+      compression:
+        request:
+          enabled: true
+          min-request-size: 2048 # 最小触发压缩的大小
+          mime-types: text/xml,application/xml,application/json
+        response:
+          enabled: true
+
+# feign日志以什么级别监控哪个接口
+logging:
+  level:
+    jp:
+      tokyo:
+        leon:
+          api:
+            feign:
+              PaymentClient: debug
+
 
 
 
