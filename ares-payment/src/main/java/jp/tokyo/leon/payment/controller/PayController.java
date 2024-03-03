@@ -13,6 +13,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author leon
@@ -52,6 +53,11 @@ public class PayController {
     @GetMapping("/pay/get/{id}")
     @Operation(summary = "获取", description = "获取支付流水方法")
     public ResponseResult<Pay> getById(@PathVariable("id") Integer id) {
+        try {
+            TimeUnit.SECONDS.sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Pay result = payService.getById(id);
         return ResponseResult.success(result);
 

@@ -57,12 +57,14 @@ public class PayResponseDTO {
      * 创建时间
      */
     @Schema(title = "创建时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+9")
     private Date createTime;
 
     /**
      * 更新时间
      */
     @Schema(title = "更新时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+9")
     private Date updateTime;
 
 }

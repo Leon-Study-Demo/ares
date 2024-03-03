@@ -13,5 +13,15 @@ spring:
         prefer-ip-address: true #优先使用服务ip进行注册
         service-name: ${spring.application.name}
 
+    openfeign:
+      client:
+        config:
+          default: # 全局
+            connect-timeout: 10000
+            read-timeout: 10000
+          ares-payment-service: # 指定服务
+            connect-timeout: 3000
+            read-timeout: 3000
+
 
 
